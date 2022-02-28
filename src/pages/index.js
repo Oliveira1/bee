@@ -1,12 +1,17 @@
 import React from "react"
-import SHeader from "../components/header"
+import Layout from "../components/Layout"
+import History from "../components/History";
+import {Grommet} from 'grommet';
+import {grommet} from "grommet/themes";
 
 export default function Home() {
 
-  return(
-      <div>
-        <SHeader/>
-      <div>Hello world!</div>
-      </div>
-  )
+    return (
+        <Grommet theme={grommet}>>
+        <Layout>
+            <History/>
+            <div>Hello world!</div>
+        </Layout>
+        </Grommet>
+    )
 }
